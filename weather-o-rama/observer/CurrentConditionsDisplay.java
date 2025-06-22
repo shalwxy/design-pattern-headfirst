@@ -1,7 +1,6 @@
 package observer;
 
 import subject.Subject;
-import subject.WeatherData;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
