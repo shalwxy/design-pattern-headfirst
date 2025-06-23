@@ -1,7 +1,7 @@
-package duck;
+package sim_u_duck.duck;
 
-import behavior.fly.FlyBehavior;
-import behavior.quack.QuackBehavior;
+import sim_u_duck.behavior.fly.FlyBehavior;
+import sim_u_duck.behavior.quack.QuackBehavior;
 
 public abstract class Duck {
     FlyBehavior flyBehavior;

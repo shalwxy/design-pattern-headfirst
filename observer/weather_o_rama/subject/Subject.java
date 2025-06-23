@@ -1,6 +1,6 @@
-package subject;
+package weather_o_rama.subject;
 
-import observer.Observer;
+import weather_o_rama.observer.Observer;
 
 public interface Subject {
     public void registerObserver(Observer o);

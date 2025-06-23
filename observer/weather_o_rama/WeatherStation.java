@@ -1,5 +1,7 @@
-import observer.CurrentConditionsDisplay;
-import subject.WeatherData;
+package weather_o_rama;
+
+import weather_o_rama.observer.CurrentConditionsDisplay;
+import weather_o_rama.subject.WeatherData;
 
 public class WeatherStation {
 

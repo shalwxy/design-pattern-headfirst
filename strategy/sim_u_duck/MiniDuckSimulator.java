@@ -1,7 +1,9 @@
-import behavior.fly.FlyRocketPowered;
-import duck.Duck;
-import duck.MallardDuck;
-import duck.ModelDuck;
+package sim_u_duck;
+
+import sim_u_duck.behavior.fly.FlyRocketPowered;
+import sim_u_duck.duck.Duck;
+import sim_u_duck.duck.MallardDuck;
+import sim_u_duck.duck.ModelDuck;
 
 public class MiniDuckSimulator {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package duck;
+package sim_u_duck.duck;
 
-import behavior.quack.QuackSound;
-import behavior.fly.FlyWithWings;
+import sim_u_duck.behavior.quack.QuackSound;
+import sim_u_duck.behavior.fly.FlyWithWings;
 
 public class MallardDuck extends Duck {
     public MallardDuck() {

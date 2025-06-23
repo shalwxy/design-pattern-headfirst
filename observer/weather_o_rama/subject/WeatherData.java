@@ -1,6 +1,6 @@
-package subject;
+package weather_o_rama.subject;
 
-import observer.Observer;
+import weather_o_rama.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;

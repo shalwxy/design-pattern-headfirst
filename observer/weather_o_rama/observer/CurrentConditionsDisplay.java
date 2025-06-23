@@ -1,6 +1,6 @@
-package observer;
+package weather_o_rama.observer;
 
-import subject.Subject;
+import weather_o_rama.subject.Subject;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
