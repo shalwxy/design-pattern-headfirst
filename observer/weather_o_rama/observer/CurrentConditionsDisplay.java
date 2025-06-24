@@ -1,21 +1,21 @@
 package weather_o_rama.observer;
 
-import weather_o_rama.subject.Subject;
+import weather_o_rama.subject.WeatherData;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
-    private Subject subject;
+    private WeatherData weatherData;
 
-    public CurrentConditionsDisplay(Subject subject) {
-        this.subject = subject;
-        subject.registerObserver(this);
+    public CurrentConditionsDisplay(WeatherData weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        this.temperature = temperature;
-        this.humidity = humidity;
+    public void update() {
+        this.temperature = weatherData.getTemperature();
+        this.humidity = weatherData.getHumidity();
         display();
     }
 

@@ -1,6 +1,5 @@
 package weather_o_rama.observer;
 
-import weather_o_rama.subject.Subject;
 import weather_o_rama.subject.WeatherData;
 
 public class StatisticsDisplay implements Observer, DisplayElement {
@@ -8,14 +7,15 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 	private float minTemp = 200;
 	private float tempSum= 0.0f;
 	private int numReadings;
-	private Subject subject;
+	private WeatherData weatherData;
 
-	public StatisticsDisplay(Subject subject) {
-		this.subject = subject;
-		subject.registerObserver(this);
+	public StatisticsDisplay(WeatherData weatherData) {
+		this.weatherData = weatherData;
+		weatherData.registerObserver(this);
 	}
 
-	public void update(float temp, float humidity, float pressure) {
+	public void update() {
+		float temp = weatherData.getTemperature();
 		tempSum += temp;
 		numReadings++;
 		if (temp > maxTemp) {

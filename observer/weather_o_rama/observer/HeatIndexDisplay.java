@@ -1,18 +1,18 @@
 package weather_o_rama.observer;
 
-import weather_o_rama.subject.Subject;
+import weather_o_rama.subject.WeatherData;
 
 public class HeatIndexDisplay implements Observer, DisplayElement {
 	private float headIndex = 0.0f;
-	private Subject subject;
+	private WeatherData weatherData;
 
-	public HeatIndexDisplay(Subject subject) {
-		this.subject = subject;
-		subject.registerObserver(this);
+	public HeatIndexDisplay(WeatherData weatherData) {
+		this.weatherData = weatherData;
+		weatherData.registerObserver(this);
 	}
 
-	public void update(float temp, float humidity, float pressure) {
-		this.headIndex = computeHeatIndex(temp, humidity);
+	public void update() {
+		this.headIndex = computeHeatIndex(weatherData.getTemperature(), weatherData.getHumidity());
 		display();
 	}
 
