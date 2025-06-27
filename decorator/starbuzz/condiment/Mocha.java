@@ -1,7 +1,6 @@
 package starbuzz.condiment;
 
 import starbuzz.Baverage;
-import starbuzz.CondimentDecorator;
 
 public class Mocha extends CondimentDecorator {
     public Mocha(Baverage baverage) {
@@ -9,8 +8,8 @@ public class Mocha extends CondimentDecorator {
     }
 
     @Override
-    public double cost() {
-        return baverage.cost() + switch (this.size) {
+    public double getCost() {
+        return baverage.getCost() + switch (getSize()) {
             case TALL -> .20;
             case GRANDE -> .25;
             case VENTI -> .30;
