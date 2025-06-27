@@ -2,6 +2,8 @@ package starbuzz.condiment;
 
 import starbuzz.Baverage;
 
+import java.util.List;
+
 public abstract class CondimentDecorator implements Baverage {
     protected Baverage baverage;
 
@@ -19,5 +21,5 @@ public abstract class CondimentDecorator implements Baverage {
     public abstract double getCost();
 
     @Override
-    public abstract String getDescription();
+    public abstract List<String> getDescription();
 }

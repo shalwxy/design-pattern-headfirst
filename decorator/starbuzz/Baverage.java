@@ -1,9 +1,11 @@
 package starbuzz;
 
+import java.util.List;
+
 public interface Baverage {
-    public enum Size { TALL, GRANDE, VENTI };
-    public void setSize(Size size);
-    public Size getSize();
-    public double getCost();
-    public String getDescription();
+    enum Size { TALL, GRANDE, VENTI };
+    void setSize(Size size);
+    Size getSize();
+    double getCost();
+    List<String> getDescription();
 }

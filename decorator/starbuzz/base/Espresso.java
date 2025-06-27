@@ -1,8 +1,13 @@
 package starbuzz.base;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Espresso extends BaseBaverage {
     public Espresso() {
-        this.description = "에스프레소";
+        List<String> description = new ArrayList<>();
+        description.add("에스프레소");
+        this.description = description;
     }
 
     @Override

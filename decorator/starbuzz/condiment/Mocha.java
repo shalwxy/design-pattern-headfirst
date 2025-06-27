@@ -2,9 +2,12 @@ package starbuzz.condiment;
 
 import starbuzz.Baverage;
 
+import java.util.List;
+
 public class Mocha extends CondimentDecorator {
     public Mocha(Baverage baverage) {
         this.baverage = baverage;
+        this.baverage.getDescription().add("모카");
     }
 
     @Override
@@ -17,7 +20,7 @@ public class Mocha extends CondimentDecorator {
     }
 
     @Override
-    public String getDescription() {
-        return baverage.getDescription() + ", 모카";
+    public List<String> getDescription() {
+        return baverage.getDescription();
     }
 }

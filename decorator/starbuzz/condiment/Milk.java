@@ -2,9 +2,12 @@ package starbuzz.condiment;
 
 import starbuzz.Baverage;
 
+import java.util.List;
+
 public class Milk extends CondimentDecorator {
     public Milk(Baverage baverage) {
         this.baverage = baverage;
+        this.baverage.getDescription().add("우유");
     }
 
     @Override
@@ -17,7 +20,7 @@ public class Milk extends CondimentDecorator {
     }
 
     @Override
-    public String getDescription() {
-        return baverage.getDescription() + ", 우유";
+    public List<String> getDescription() {
+        return this.baverage.getDescription();
     }
 }

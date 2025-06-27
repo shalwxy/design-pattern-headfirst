@@ -1,8 +1,13 @@
 package starbuzz.base;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Decaf extends BaseBaverage {
     public Decaf() {
-        this.description = "디카페인";
+        List<String> description = new ArrayList<>();
+        description.add("디카페인");
+        this.description = description;
     }
 
     @Override

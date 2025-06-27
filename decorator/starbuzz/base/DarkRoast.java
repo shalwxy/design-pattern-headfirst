@@ -1,8 +1,13 @@
 package starbuzz.base;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DarkRoast extends BaseBaverage {
     public DarkRoast() {
-        this.description = "다크 로스트";
+        List<String> description = new ArrayList<>();
+        description.add("다크 로스트");
+        this.description = description;
     }
 
     @Override

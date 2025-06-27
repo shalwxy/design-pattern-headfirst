@@ -2,8 +2,10 @@ package starbuzz.base;
 
 import starbuzz.Baverage;
 
+import java.util.List;
+
 public abstract class BaseBaverage implements Baverage {
-    protected String description = "기본 음료";
+    protected List<String> description;
 
     protected Size size = Size.TALL;
     @Override
@@ -20,7 +22,7 @@ public abstract class BaseBaverage implements Baverage {
     public abstract double getCost();
 
     @Override
-    public String getDescription() {
+    public List<String> getDescription() {
         return this.description;
     }
 }

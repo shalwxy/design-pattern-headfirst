@@ -2,9 +2,12 @@ package starbuzz.condiment;
 
 import starbuzz.Baverage;
 
+import java.util.List;
+
 public class Whip extends CondimentDecorator {
     public Whip(Baverage baverage) {
         this.baverage = baverage;
+        this.baverage.getDescription().add("휘핑크림");
     }
 
     @Override
@@ -17,7 +20,7 @@ public class Whip extends CondimentDecorator {
     }
 
     @Override
-    public String getDescription() {
-        return baverage.getDescription() + ", 휘핑크림";
+    public List<String> getDescription() {
+        return baverage.getDescription();
     }
 }
