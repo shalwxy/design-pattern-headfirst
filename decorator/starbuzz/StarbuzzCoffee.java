@@ -16,12 +16,14 @@ public class StarbuzzCoffee {
         baverage2 = new Mocha(baverage2);
         baverage2 = new Mocha(baverage2);
         baverage2 = new Whip(baverage2);
+        baverage2.setSize(Baverage.Size.GRANDE);
         System.out.println(baverage2.string());
 
         Baverage baverage3 = new HouseBlend();
         baverage3 = new Soy(baverage3);
         baverage3 = new Mocha(baverage3);
         baverage3 = new Whip(baverage3);
+        baverage3.setSize(Baverage.Size.VENTI);
         System.out.println(baverage3.string());
     }
 

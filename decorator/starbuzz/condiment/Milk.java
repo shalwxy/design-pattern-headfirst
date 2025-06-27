@@ -10,7 +10,11 @@ public class Milk extends CondimentDecorator {
 
     @Override
     public double cost() {
-        return baverage.cost() + .10;
+        return baverage.cost() + switch (this.size) {
+            case TALL -> .10;
+            case GRANDE -> .15;
+            case VENTI -> .20;
+        };
     }
 
     @Override
