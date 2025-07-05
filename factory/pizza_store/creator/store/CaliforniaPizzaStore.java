@@ -1,4 +1,4 @@
-package pizza_store.factory;
+package pizza_store.creator.store;
 
 import pizza_store.pizza.*;
 

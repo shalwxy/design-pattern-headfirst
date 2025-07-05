@@ -1,8 +1,8 @@
 package pizza_store;
 
-import pizza_store.factory.ChicagoPizzaStore;
-import pizza_store.factory.NYPizzaStore;
-import pizza_store.factory.PizzaStore;
+import pizza_store.creator.store.ChicagoPizzaStore;
+import pizza_store.creator.store.NYPizzaStore;
+import pizza_store.creator.store.PizzaStore;
 import pizza_store.pizza.Pizza;
 
 public class PizzaTestDrive {
