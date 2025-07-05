@@ -1,38 +1,41 @@
 package pizza_store.creator.incredient_factory;
 
 import pizza_store.ingredient.cheese.Cheese;
-import pizza_store.ingredient.cheese.CheeseReggiano;
+import pizza_store.ingredient.cheese.CheeseMozzarella;
 import pizza_store.ingredient.clam.Clam;
-import pizza_store.ingredient.clam.ClamFresh;
+import pizza_store.ingredient.clam.ClamFrozen;
 import pizza_store.ingredient.dough.Dough;
-import pizza_store.ingredient.dough.DoughThinCrust;
+import pizza_store.ingredient.dough.DoughThickCrust;
 import pizza_store.ingredient.pepperoni.Pepperoni;
 import pizza_store.ingredient.pepperoni.PepperoniSliced;
 import pizza_store.ingredient.sauce.Sauce;
-import pizza_store.ingredient.sauce.SauceMarinara;
-import pizza_store.ingredient.veggie.*;
+import pizza_store.ingredient.sauce.SaucePlumTomato;
+import pizza_store.ingredient.veggie.BlackOlives;
+import pizza_store.ingredient.veggie.EggPlant;
+import pizza_store.ingredient.veggie.Spinach;
+import pizza_store.ingredient.veggie.Veggie;
 
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Dough createDough() {
-        return new DoughThinCrust();
+        return new DoughThickCrust();
     }
 
     @Override
     public Sauce createSauce() {
-        return new SauceMarinara();
+        return new SaucePlumTomato();
     }
 
     @Override
     public Cheese createCheese() {
-        return new CheeseReggiano();
+        return new CheeseMozzarella();
     }
 
     @Override
     public Veggie[] createVeggies() {
-        return new Veggie[]{ new Garlic(), new Onion(), new Mushroom(), new Redpepper() };
+        return new Veggie[]{ new EggPlant(), new Spinach(), new BlackOlives() };
     }
-
+    
     @Override
     public Pepperoni createPepperoni() {
         return new PepperoniSliced();
@@ -40,6 +43,6 @@ public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 
     @Override
     public Clam createClam() {
-        return new ClamFresh();
+        return new ClamFrozen();
     }
 }
